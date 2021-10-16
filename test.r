@@ -182,3 +182,54 @@ Error in FUN(X[[i]], ...) : object 'age' not found
 > ggplot(df, aes(x=Road.Type, y=Wind.Speed, fill = factor(Junction.Type))) + geom_bar(stat = "Identity", position = "dodge") + scale_fill_discrete(name = "Junction.Type", breaks = c(0, 1, 2, 3, 4), labels = c("0", "1", "2", "3", "4"))
 > 
 
+ggplot(df2, aes(x=Junction.Type, y=Speed, color=Gender)) + geom_boxplot()
+> ggplot(df2, aes(x=Junction.Type, y=Speed, color=Gender)) + geom_bar(stat = "Identity")
+> ggplot(df2, aes(x=Junction.Type, y=Speed, color=Casualty.Class)) + geom_bar(stat = "Identity")
+> gg <- ggplot(df2, aes(x=Junction.Type, y=Speed, color=Casualty.Class)) + geom_bar(stat = "Identity")
+> gg3 <- ggplot(df2, aes(x=Junction.Type, y=Speed, color=Casualty.Class)) + geom_bar(stat = "Identity")
+> gg3 + facet_grid(Junction.Type ~ Speed)
+> ggplot(df2, aes(x=Junction.Type, y=Speed, color=Casualty.Class)) + geom_bar(stat = "Identity")
+> ggplot(df2, aes(x=Junction.Type, y=Speed, color=Gender)) + geom_boxplot()
+> ggplot(df2, aes(x=Junction.Type, y=Speed, color=Gender)) + geom_point()
+> ggplot(df2, aes(x=Junction.Type, y=Speed, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+Warning message:
+Computation failed in `stat_smooth()`:
+x has insufficient unique values to support 10 knots: reduce k. 
+> ggplot(df2, aes(x=Junction.Type, y=Speed, color=Gender)) + geom_point()
+> ggplot(df2, aes(x=Junction.Type, y=Speed, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+Warning message:
+Computation failed in `stat_smooth()`:
+x has insufficient unique values to support 10 knots: reduce k. 
+> ggplot(df2, aes(x=Wind.speed, y=Speed, color=Gender)) + geom_smooth()
+Error in FUN(X[[i]], ...) : object 'Wind.speed' not found
+> ggplot(df2, aes(x=Wind.Speed, y=Speed, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+> ggplot(df2, aes(x=damage, y=Speed, color=Gender)) + geom_smooth()
+Error in FUN(X[[i]], ...) : object 'damage' not found
+> ggplot(df2, aes(x=Damage, y=Speed, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+> ggplot(df2, aes(x=Severity, y=Speed, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+> ggplot(df2, aes(x=Brightness, y=Speed, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+> ggplot(df, aes(x=Brightness, y=Speed, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+> ggplot(df, aes(x=Brightness, y=Wind.Speed, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+> ggplot(df, aes(x=Brightness, y=Severity, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+> ggplot(df, aes(x=Brightness, y=Age, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+> ggplot(df, aes(x=Brightness, y=Junction.Type, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+> ggplot(df, aes(x=Brightness, y=Severity, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+> ggplot(df, aes(x=Brightness, y=Speed, color=Gender)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+> ggplot(df, aes(x=Brightness, y=Speed, color=Casualty.Class)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
+> df5 <- df[df$Casualty.Class == "O", ]
+> ggplot(df5, aes(x=Brightness, y=Speed, color=Casualty.Class)) + geom_smooth()
+`geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'
