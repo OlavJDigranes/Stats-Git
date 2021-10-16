@@ -12,3 +12,6 @@ ggplot(df, aes(x=Age, y=Severity, color=Gender)) + geom_smooth()
 ggplot(df, aes(x=Casualty.Class, y=Brightness, color=Gender)) + geom_boxplot()
 
 ggplot(df, aes(x=Road.Type, y=Age, color=Gender)) + geom_boxplot()
+
+df2 <- df[df$Road.Type == "M", ]
+ggplot(df2, aes(x=Road.Type, y=Age, color=Gender)) + geom_boxplot()
