@@ -3,3 +3,5 @@ ggplot(df, aes(x=Road.Type, y=Damage, fill = factor(Gender))) + geom_bar(stat = 
 ggplot(df, aes(x=Road.Type, y=Damage)) + geom_bar(stat = "Identity")
 
 ggplot(df, aes(x=Damage, y=Severity, color=Road.Type)) + geom_point() + geom_smooth()
+
+ggplot(df, aes(x=Speed, y=Brightness, color=Casualty.Class)) + geom_point() + geom_smooth()
