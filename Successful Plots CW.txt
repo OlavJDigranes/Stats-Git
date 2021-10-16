@@ -1,6 +1,7 @@
 ggplot(df, aes(x=Road.Type, y=Damage, fill = factor(Gender))) + geom_bar(stat = "Identity", position = "dodge") + scale_fill_discrete(name = "Gender", breaks = c("M", "F"), labels = c("Male", "Female")) + xlab("Road Type") + ylab("Damage")
 
 ggplot(df, aes(x=Road.Type, y=Damage)) + geom_bar(stat = "Identity")
+ggplot(df, aes(x=Road.Type, y=Damage, color=Gender)) + geom_boxplot()
 
 ggplot(df, aes(x=Damage, y=Severity, color=Road.Type)) + geom_point() + geom_smooth()
 
@@ -15,3 +16,5 @@ ggplot(df, aes(x=Road.Type, y=Age, color=Gender)) + geom_boxplot()
 
 df2 <- df[df$Road.Type == "M", ]
 ggplot(df2, aes(x=Road.Type, y=Age, color=Gender)) + geom_boxplot()
+
+ggplot(df4, aes(x=Age, y=Severity, color=Gender)) + geom_smooth()
