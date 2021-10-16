@@ -6,3 +6,9 @@ ggplot(df, aes(x=Damage, y=Severity, color=Road.Type)) + geom_point() + geom_smo
 
 ggplot(df, aes(x=Speed, y=Brightness, color=Casualty.Class)) + geom_point() + geom_smooth()
 ggplot(df, aes(x=Speed, y=Brightness, color=Casualty.Class)) + geom_smooth()
+
+ggplot(df, aes(x=Age, y=Severity, color=Gender)) + geom_smooth()
+
+ggplot(df, aes(x=Casualty.Class, y=Brightness, color=Gender)) + geom_boxplot()
+
+ggplot(df, aes(x=Road.Type, y=Age, color=Gender)) + geom_boxplot()
